@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 
+Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<body>
+	<h1><h:outputText rendered="#{not empty helloHist.name}" value="Hallo #{helloHist.name}"/></h1>
+	<h2>Bitte gib einen Namen ein</h2>
+	
+	<h:form>
+		<h:inputText value="#{helloHist.name}"></h:inputText>
+		<h:commandButton action="#{helloHist.sayHello}" value="Hallo sagen"> </h:commandButton>
+	</h:form>
+	
+	<h2>Du hast bisher die folgenden Personen gegrüßt</h2>
+	
+	<ul>
+		<ui:repeat var="name" value="#{helloHist.names}">
+			<li>
+				<h:outputText value="#{name}"/>
+			</li>
+		</ui:repeat>
+	</ul>
+	
+	<a href="index.html">zurück</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 
+Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<body>
+	<h1><h:outputText rendered="#{not empty helloForm.name}" value="Hallo #{helloForm.name}"/></h1>
+	<h2>Bitte gib einen Namen ein</h2>
+	
+	<h:form>
+		<h:inputText value="#{helloForm.name}"></h:inputText>
+		<h:commandButton action="#{helloForm.sayHello}" value="Hallo sagen"> </h:commandButton>
+	</h:form>
+	<a href="index.html">zurück</a>
+</body>
+</html>
