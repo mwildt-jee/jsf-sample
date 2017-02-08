@@ -1,11 +1,11 @@
 package de.hsw.jee.sample;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.RequestScoped;
 
 
 @ManagedBean
-@SessionScoped
+@RequestScoped
 public class HelloForm {
 	
 	private String name = null;
